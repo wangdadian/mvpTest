@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<doc>
+	<mvp ip="192.168.0.118" port="4510"  enabled="true">
+		<client enabled="true">
+			<user>1</user>
+			<pass>0</pass>
+			<maxWnd>10</maxWnd>
+		</client>
+		<client enabled="true">
+			<user>2</user>
+			<pass>0</pass>
+			<maxWnd>11</maxWnd>
+		</client>
+		<client enabled="true">
+			<user>3</user>
+			<pass>0</pass>
+			<maxWnd>12</maxWnd>
+		</client>
+	</mvp>
+	<mvp ip="192.168.0.118" port="4510"  enabled="true">
+		<client enabled="true">
+			<user>1</user>
+			<pass>0</pass>
+			<maxWnd>10</maxWnd>
+		</client>
+		<client enabled="true">
+			<user>2</user>
+			<pass>0</pass>
+			<maxWnd>10</maxWnd>
+		</client>
+		<client enabled="true">
+			<user>3</user>
+			<pass>0</pass>
+			<maxWnd>10</maxWnd>
+		</client>
+	</mvp>
+</doc>

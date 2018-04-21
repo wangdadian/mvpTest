@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<doc>
+    <debug file="true" console="true"></debug>
+    <statistic>
+        <file enabled="true" timeInterval="5" detail="true"></file>
+        <console enabled="true" timeInterval="3" detail="false"></console>
+    </statistic>
+    <mvp ip="192.168.0.118" port="4510" enabled="true">
+        <client scan="false" scanTimeInterval="15" reStartLive="true" randomSwitch="true" enabled="true">
+            <user>1</user>
+            <pass>0</pass>
+            <maxWnd>10</maxWnd>
+            <reLogin>true</reLogin>
+        </client>
+    </mvp>
+</doc>
+
+<!--
+配置说明：
+mvp:
+    1、ip：登录的mvp服务器IP地址
+    2、port：mvp端口
+    3、enabled：是否登录此mvp，仅当为true时生效（目前仅支持一个为true）
+    4、client：登录mvp的客户端信息
+        1、scan：是否轮询，true是，其他否。轮询时不会针对直播失败的自动重新切换另一路相机（轮巡时忽略reStartLive参数）
+        2、scanTimeInterval：轮询间隔（>=15秒）
+        3、reStartLive：仅针对请求直播成功但收流超时的重新请求另一路直播直至收流成功，true为重新请求，其他否
+        4、enabled：为true时，使用此客户端登录mvp（目前仅支持一个为true）
+        5、user：登录用户名
+        6、pass：登录密码
+        7、maxWnd：最大请求直播路数(1-999)
+        8、randomSwitch：是否随机切换
+        9、reLogin：是否重新登录。true断开后重连mvp（间隔10秒重连），其他不重连并在断开后退出程序。
+
+debug:
+    1、file：调试信息是否记录至日志文件，true记录（程序目录下的mvpTest_年月日.log），其他不记录。
+    2、console：调试信息是否终端打印，true打印，其他否。
+
+statistic:
+    1、file：统计信息记录文件，console：统计信息打印终端
+        1、enabled：是否生效
+        2、timeInterval：统计及记录间隔 >=2秒
+        4、detail：是否展示明细信息。true表示总览信息及每路直播明细信息均打印或记录，其他表示仅打印或记录总览信息
+-->
